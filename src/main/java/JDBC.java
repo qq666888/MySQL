@@ -18,7 +18,7 @@ public class JDBC {
         // 2. 取得一次数据库连接
         Connection connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/db_1702", "root", "system");
         // 3. 预编译语句
-        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO db_1702.course VALUES (NULL, 'Front-end', 2 )");
+        PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO db_1702.course VALUES (NULL, 'Front-end', 2,2 )");
         // 4. 执行语句
         preparedStatement.executeUpdate();
     }
