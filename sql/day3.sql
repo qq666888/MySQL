@@ -34,11 +34,11 @@ CREATE TABLE db_1702.student_course (-- 创建
 );
 
 -- alter 改变\ ['ɔːltə\;\ 'ɒl-]    DDL
-ALTER TABLE db_1702.student_course-- 修改数据表
-  ADD CONSTRAINT-- 增加约束
-  fk_student_course_studentId-- fk外键缩写
-FOREIGN KEY (studentId)-- 外键
-REFERENCES db_1702.student (id); -- a href hyper reference-- 引用
+alter table db_1702.student_course-- 修改数据表
+  add constraint-- 增加约束
+  fk_student_course_studentid-- fk外键缩写
+foreign key (studentid)-- 外键
+references db_1702.student (id); -- a href hyper reference-- 引用
 
 ALTER TABLE db_1702.student_course
   ADD CONSTRAINT
