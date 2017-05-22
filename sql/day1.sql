@@ -8,7 +8,7 @@ create table db_1702.student (-- 创建数据表
 
   -- 注释
   sno    varchar(10) comment '学号',
-  name   varchar(10)  NOT NULL comment '姓名', -- 姓名，可变长字符串，最大值255
+  name   varchar(10)  not null comment '姓名', -- 姓名，可变长字符串，最大值255
   intro  text comment '介绍', -- 介绍，文本类型
   gender char(2) comment '性别', -- 性别，字符类型
   age    int comment '年龄',
