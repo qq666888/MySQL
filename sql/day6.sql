@@ -44,7 +44,8 @@ SELECT
 e.ENAME,
 d.DNAME
 FROM scott.emp e LEFT OUTER JOIN scott.dept d-- 左外链接
-ON e.DEPTNO = d.DEPTNO;
+-- ON e.DEPTNO = d.DEPTNO;
+UNION (DEPTNO);
 
 SELECT
 e.ENAME,
@@ -62,6 +63,14 @@ ON e.DEPTNO = d.DEPTNO;
 -- 学生选了哪些课
 -- 课有哪些学生选
 -- 查所有学生获得的总学分
+DROP DATABASE scott;
+
+SELECT *
+FROM scott.dept;
+
+SELECT e.*,d.dname
+FROM scott.emp e INNER JOIN scott.dept d
+ON e.DEPTNO=d.DEPTNO;
 
 
 
