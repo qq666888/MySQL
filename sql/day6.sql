@@ -25,15 +25,15 @@ SELECT ENAME,LOC
 FROM scott.emp INNER JOIN scott.dept-- 内链接查询
 ON scott.emp.DEPTNO=scott.dept.DEPTNO;-- 链接条件
 
-SHOW FULL COLUMN FROM scott.emp;
-SHOW FULL COLUMN FROM scott.dept;
+SHOW FULL COLUMNS FROM scott.emp;
+SHOW FULL COLUMNS FROM scott.dept;
 
---返回拥有员工的部门名，部门号
+-- 返回拥有员工的部门名，部门号
 SELECT DISTINCT d.DEPTNO,d.DNAME-- 提高查询效率
 FROM scott.dept  d INNER JOIN scott.emp  e-- ?
 ON e.DEPTNO = d.DEPTNO;
 
---返回员工和所属经理的姓名
+-- 返回员工和所属经理的姓名
 SELECT
 e1.ENAME,-- 员工姓名
 e2.ENAME-- 经理姓名
@@ -43,9 +43,9 @@ ON e1.MGR=e2.EMPNO;
 SELECT
 e.ENAME,
 d.DNAME
-FROM scott.emp e LEFT OUTER JOIN scott.dept d-- 左外链接
--- ON e.DEPTNO = d.DEPTNO;
-UNION (DEPTNO);
+FROM scott.emp e LEFT OUTER JOIN scott.dept d -- 左外链接
+ON e.DEPTNO = d.DEPTNO;
+-- UNION ();
 
 SELECT
 e.ENAME,
@@ -71,6 +71,19 @@ FROM scott.dept;
 SELECT e.*,d.dname
 FROM scott.emp e INNER JOIN scott.dept d
 ON e.DEPTNO=d.DEPTNO;
+
+CREATE VIEW scott.v_emp AS  SELECT * FROM scott.emp;
+USE scott;
+SHOW TABLES ;
+DROP VIEW v_emp;
+
+SELECT *
+FROM scott.v_emp;
+
+UPDATE scott.emp
+    SET HIREDATE='1981-5-1'
+WHERE HIREDATE='1981-4-2';
+
 
 
 
