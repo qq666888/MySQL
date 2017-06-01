@@ -85,3 +85,5 @@ FOREIGN KEY (partOfSpeechId)
 REFERENCES db_dict.part_of_speech (id);
 
 
+
+
